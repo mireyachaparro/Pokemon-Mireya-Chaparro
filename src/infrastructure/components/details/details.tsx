@@ -1,3 +1,4 @@
-export function Details() {
-    return <p>HOLA</p>;
+function Details() {
+    return <p>hola</p>;
 }
+export default Details;
