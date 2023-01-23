@@ -1,4 +1,4 @@
-import { PokeInitial, Pokemon } from "../model/poke.model";
+import { PokeInitial, Pokemon } from "../../model/poke.model";
 
 export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(

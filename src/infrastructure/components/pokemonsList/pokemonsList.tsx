@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchPokemons } from "../../services/pokeRepository";
+import { fetchPokemons } from "../../services/repoPoke/pokeRepository";
 import { Loading } from "../loading/loading";
 import PokeItem from "./pokeItem";
 

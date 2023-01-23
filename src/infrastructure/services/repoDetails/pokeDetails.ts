@@ -1,4 +1,4 @@
-import { pokeDetails } from "../model/poke.model";
+import { pokeDetails } from "../../model/poke.model";
 // import { replaceName } from "../utils/replaceName";
 
 export async function fetchDetails(name: string): Promise<pokeDetails> {
