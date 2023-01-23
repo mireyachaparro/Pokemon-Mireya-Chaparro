@@ -1,3 +1,5 @@
+import { type } from "@testing-library/user-event/dist/type";
+
 export type Pokemon = {
     national_number: string;
     evolution: null;
@@ -17,4 +19,13 @@ export type PokeInitial = {
     name: string;
     id: string;
     imgSrc: string;
+};
+
+export type pokeDetails = {
+    name: string;
+    id: string;
+    imgSrc: string;
+    hp: number;
+    attack: number;
+    defense: number;
 };
