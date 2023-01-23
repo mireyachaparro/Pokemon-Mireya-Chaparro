@@ -17,11 +17,11 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
         imgSrc: pokemon.sprites.normal.toLowerCase(),
     }));
 
-    const pepe = pokemons.filter(
+    const noRepeat = pokemons.filter(
         (pokemon: any, index: number) =>
             pokemons.findIndex((other: any) => other.id === pokemon.id) ===
             index
     );
 
-    return pepe;
+    return noRepeat;
 }

@@ -10,7 +10,8 @@ export function AppRoutes() {
             <Routes>
                 <Route path="pokemons">
                     <Route index element={<List></List>}></Route>
-                    <Route path=":id" element={<Details></Details>}></Route>
+                    {/* <Route path=":id" element={<Details></Details>}></Route> */}
+                    <Route path=":name" element={<Details></Details>}></Route>
                 </Route>
                 <Route path="" element={<List></List>}></Route>
                 <Route path="*" element={<List></List>}></Route>
