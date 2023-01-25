@@ -14,13 +14,30 @@ export function SearchBar() {
     return (
         <>
             <form>
-                <input
+                <div className="input-group mb-3">
+                    <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Busca un pokemon"
+                        aria-label="Busca un pokemon"
+                        aria-describedby="button-addon2"
+                    ></input>
+                    <button
+                        className="btn btn-primary text-white"
+                        type="button"
+                        id="button-addon2"
+                    >
+                        Buscar
+                    </button>
+                </div>
+
+                {/* <input
                     type="search"
                     placeholder="Busca un pokemon"
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
                 />
-                <input type="submit" value="Buscar" />
+                <input type="submit" value="Buscar" /> */}
             </form>
             <p>{filteredPokemons.map((pokemon) => pokemon.name)}</p>
         </>
