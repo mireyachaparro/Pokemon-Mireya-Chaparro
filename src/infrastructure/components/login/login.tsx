@@ -12,9 +12,12 @@ export function LoginButton() {
     };
 
     return (
-        <div>
+        <div className="d-flex justify-content-end py-2 px-2">
             {!isAuthenticated && (
-                <button className="auth__button--logout" onClick={handleLogin}>
+                <button
+                    className="auth__button--logout btn btn-primary "
+                    onClick={handleLogin}
+                >
                     Login
                 </button>
             )}
