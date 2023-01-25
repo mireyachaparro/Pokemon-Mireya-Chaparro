@@ -23,7 +23,7 @@ function PokeList() {
     ) : (
         <>
             {pokemons.slice(0, 151).map((pokemon) => (
-                <ul key={pokemon.id}>
+                <ul className="list-unstyled px-4" key={pokemon.id}>
                     <PokeItem pokemon={pokemon}></PokeItem>
                 </ul>
             ))}
