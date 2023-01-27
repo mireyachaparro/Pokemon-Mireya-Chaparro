@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { pokeDetails } from "../../model/poke.model";
-import { fetchDetails } from "../../services/pokeDetails";
+import { fetchDetails } from "../../services/repoDetails/pokeDetails";
 
 function Details() {
     const [pokemon, setPokemon] = useState<pokeDetails>();

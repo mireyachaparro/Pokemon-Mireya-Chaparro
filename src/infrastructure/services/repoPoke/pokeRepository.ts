@@ -1,4 +1,4 @@
-import { PokeInitial, Pokemon } from "../model/poke.model";
+import { PokeInitial, Pokemon } from "../../model/poke.model";
 
 export async function fetchPokemons(): Promise<PokeInitial[]> {
     const response = await fetch(
@@ -18,9 +18,10 @@ export async function fetchPokemons(): Promise<PokeInitial[]> {
     }));
 
     const noRepeat = pokemons.filter(
-        (pokemon: any, index: number) =>
-            pokemons.findIndex((other: any) => other.id === pokemon.id) ===
-            index
+        (pokemon: PokeInitial, index: number) =>
+            pokemons.findIndex(
+                (other: PokeInitial) => other.id === pokemon.id
+            ) === index
     );
 
     return noRepeat;

@@ -4,6 +4,8 @@ import { Header } from "../header/header";
 import { AppRoutes } from "../routes/app.routes";
 import { Auth0Provider } from "@auth0/auth0-react";
 import { LoginButton } from "../login/login";
+import { SearchBar } from "../search/searchBar";
+import { Menu } from "../menu/menu";
 
 function App() {
     return (
@@ -14,7 +16,9 @@ function App() {
                 redirectUri={window.location.origin}
             >
                 <Header></Header>
-                <LoginButton></LoginButton>
+                <Menu></Menu>
+                {/* <LoginButton></LoginButton>
+                <SearchBar></SearchBar> */}
                 <AppRoutes></AppRoutes>
             </Auth0Provider>
         </>
