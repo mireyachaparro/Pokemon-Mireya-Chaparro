@@ -17,8 +17,7 @@ function Details() {
 
     return (
         <>
-            {/* <div className="px-4 col-full border border-3 border-info-subtle d-inline-flex flex-column align-items-center mx-4"> */}
-            <div className="mx-4 d-flex align-items-center">
+            <div className="mx-4 d-flex flex-column align-items-center">
                 <h1>{pokemon?.name.toLocaleUpperCase()}</h1>
                 <p>N. {pokemon?.id}</p>
                 <img src={pokemon?.imgSrc} alt={pokemon?.name} width="120px" />
