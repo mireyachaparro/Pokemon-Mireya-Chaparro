@@ -1,16 +1,12 @@
-import { useState } from "react";
-import { Pokemon } from "../../model/poke.model";
+import { searchType } from "../../model/poke.model";
+import { fetchPokemons } from "../../services/repoPoke/pokeRepository";
 
-export function SearchBar() {
-    const [query, setQuery] = useState("");
-    const [pokemons, setPokemons] = useState<Pokemon[]>([]);
-
-    const filteredPokemons = pokemons.slice(0, 151).filter((pokemon) => {
-        return pokemon.name
-            .toLocaleLowerCase()
-            .match(query.toLocaleLowerCase());
-    });
-
+export function SearchBar({ query, setQuery }: searchType) {
+    const handleInput = (event: any) => {
+        event.preventDefault();
+        if (query === "") fetchPokemons();
+        setQuery(event.target.value);
+    };
     return (
         <>
             <form>
@@ -21,25 +17,11 @@ export function SearchBar() {
                         placeholder="Busca un pokemon"
                         aria-label="Busca un pokemon"
                         aria-describedby="button-addon2"
+                        value={query}
+                        onChange={handleInput}
                     ></input>
-                    <button
-                        className="btn btn-primary text-white"
-                        type="button"
-                        id="button-addon2"
-                    >
-                        Buscar
-                    </button>
                 </div>
-
-                {/* <input
-                    type="search"
-                    placeholder="Busca un pokemon"
-                    value={query}
-                    onChange={(event) => setQuery(event.target.value)}
-                />
-                <input type="submit" value="Buscar" /> */}
             </form>
-            <p>{filteredPokemons.map((pokemon) => pokemon.name)}</p>
         </>
     );
 }
