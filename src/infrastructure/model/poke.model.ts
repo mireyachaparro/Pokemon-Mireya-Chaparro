@@ -1,5 +1,3 @@
-import { type } from "@testing-library/user-event/dist/type";
-
 export type Pokemon = {
     national_number: string;
     evolution: null;
@@ -28,4 +26,9 @@ export type pokeDetails = {
     hp: number;
     attack: number;
     defense: number;
+};
+
+export type searchType = {
+    query: string;
+    setQuery: (query: string) => void;
 };
