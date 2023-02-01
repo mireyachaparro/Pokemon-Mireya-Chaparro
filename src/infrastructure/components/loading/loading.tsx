@@ -1,8 +1,7 @@
 export function Loading() {
     return (
         <div>
-            {/* <img src="./assets/logo.png" alt="logo" />; */}
-            <p>Loading...</p>
+            <img src="https://i.gifer.com/4OKl.gif" alt="logo" width="100px" />
         </div>
     );
 }

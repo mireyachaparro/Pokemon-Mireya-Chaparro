@@ -17,13 +17,19 @@ function Details() {
 
     return (
         <>
-            <div className="mx-4 d-flex flex-column align-items-center">
-                <h1>{pokemon?.name.toLocaleUpperCase()}</h1>
-                <p>N. {pokemon?.id}</p>
-                <img src={pokemon?.imgSrc} alt={pokemon?.name} width="120px" />
-                <p>Hit Points: {pokemon?.hp}</p>
-                <p>Attack: {pokemon?.attack}</p>
-                <p>Defense: {pokemon?.defense}</p>
+            <div className="d-flex flex-column justify-content-center align-items-center col-full mt-2">
+                <div className="d-flex flex-column align-items-center p-2">
+                    <h1>{pokemon?.name.toLocaleUpperCase()}</h1>
+                    <p>N. {pokemon?.id}</p>
+                    <img
+                        src={pokemon?.imgSrc}
+                        alt={pokemon?.name}
+                        width="120px"
+                    />
+                    <p>Hit Points: {pokemon?.hp}</p>
+                    <p>Attack: {pokemon?.attack}</p>
+                    <p>Defense: {pokemon?.defense}</p>
+                </div>
             </div>
         </>
     );

@@ -12,7 +12,7 @@ export function LoginButton() {
     };
 
     return (
-        <div>
+        <div className="d-flex flex-column align-items-end">
             {!isAuthenticated && (
                 <button
                     className="auth__button--logout btn btn-primary "
