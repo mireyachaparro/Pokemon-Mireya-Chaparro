@@ -10,7 +10,7 @@ export function SearchBar({ query, setQuery }: searchType) {
     return (
         <>
             <form>
-                <div className="input-group mb-3">
+                <div className="input-group mb-3 px-4">
                     <input
                         type="text"
                         className="form-control"
